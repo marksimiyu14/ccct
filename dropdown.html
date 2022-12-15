@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Drop Menu</title>
+    <link rel="stylesheet" href="dropdown.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <h2>Mar<span>co</span></h2>
+        </div>
+        <div class="search-bar">
+            <input class="input" type="text" placeholder="Search">
+            <div class="srchbtn">
+                <i class="fa fa-search"></i>
+            </div>
+        </div>
+        <ul>
+            <li class="active"><a href="#">Home</li></a>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <!-- Slider main container -->
+        <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide"><img src="images/aston-martin.jpg"></div>
+                <div class="swiper-slide"><img src="images/audi-rs-e-tron-gt.jpg"></div>
+                <div class="swiper-slide"><img src="images/maserati-mc20.jpg"></div>
+                <div class="swiper-slide"><img src="images/nio-et5.jpg"></div>
+                ...
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            // Optional parameters
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            loop: true,
+
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+        });
+    </script>
+</body>
+
+</html>
